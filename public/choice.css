@@ -1,16 +1,55 @@
 * {
- margin: 0;
- padding: 0;
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    font-size: 20px;
+}
+
+body {
+    background-color: #f55b82;
+    color: white;
+}
+
+.box {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin-bottom: 20px;
 }
 
 .elder-list {
-    
+    width: 300px;
 }
 
 .elder-item{
-    
+    width: 100%;
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-btn{
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 40px;
+    color: #f55b82;
+    font-weight: 600;
+}
 
+.tiger2 {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(69deg) brightness(102%) contrast(101%);
+    height: 200px;
+}
+
+.nav-btn:hover {
+    color: white;
+    background-color: lightslategray;
 }

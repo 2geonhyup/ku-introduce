@@ -2,6 +2,26 @@
     display: flex;
     justify-content: center;
     top: 0;
+    background:#f55b82;
+    color: white;
+}
+#chat-screen {
+    height: 500vh;
+    background: #f55b82;
+}
+.alt-header__title{
+    font-size: 35px;
+}
+.chat__timestamp{
+    background-color: #f55b82;
+}
+.message__author{
+    color: white;
+    font-size: 17px;
+}
+.message-row--own .message__bubble{
+    background-color:#8F8989;
+    color:whitesmoke;
 }
 body{
     margin : 0;

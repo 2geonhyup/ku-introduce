@@ -13,27 +13,6 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 
-// // 선배side data 보내기
-// function sendAnswerData(){
-//     // dummy data
-//     const fullName = "안수진";
-//     const answers = [
-//         "여자",
-//         "석계",
-//         "a형",
-//         "esfj",
-//         "미필",
-//         "19",
-//         "안경안씀",
-//         "발라드"
-//     ];
-//     db.collection('후배1').doc().set({
-//         name: fullName,
-//         answers: answers
-//     });
-// }
-
-
 function paintGame(name, answers) {
     console.log(name, answers);
 }
@@ -61,31 +40,29 @@ async function makeElderList(){
         const newId = i++;
         // 전체 박스 생성
         const div = document.createElement("div");
-    
-        const name = `${newId}번 선배`;
-        div.innerText = name;
         div.className = "elder-item";
         div.id = i;
+    
+        const name = `선배${newId}`;
+        const content = document.createElement("div");
+        content.innerText = name;
 
 
         const navigateBtn = document.createElement("button");
         navigateBtn.className = "nav-btn";
-        navigateBtn.innerText = "GO!";
-
-        // let result = item[1].map( x =>{
-        //     return x.codePointAt(0);
-        // });
+        navigateBtn.innerText = "GO";
         
         // 새로운 페이지로 이동겸,
         // 매개변수 등록 -> 이름, 답변 리스트
         navigateBtn.addEventListener('click', function(e){
-            e.preventDefault();
-           
-            let myUri =  `./game.html?name=${item[0]}&answers=${item[1]}`;
+            let myUri =  encodeURI(`./game.html?block=456372934778491039479347938470935847298592458047509247598749850375027098493704975490174983704917230498374091983470990137498091347896578914703974613784638451687491&name=${item[0]}&answers=${item[1]}`);
             location.href = myUri;
         });
 
+        
+        div.appendChild(content);
         div.appendChild(navigateBtn);
+        
         elderList.appendChild(div);
     });
 }
