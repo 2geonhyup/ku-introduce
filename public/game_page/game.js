@@ -40,7 +40,7 @@ var getParameters = function (paramName) {
         $messageRowSend = $('<div class = "message-row"></div>');
         $messageRowSendDiv1 = $('<div class = "message-row__content"></div>');
         $messageRowSendDiv2 = $('<div class="message__info"></div>');
-        $messageRowSend.append($('<img src="tiger.JPG">'));
+        $messageRowSend.append($('<img src="../images/tiger.JPG">'));
         $messageRowSend.append($messageRowSendDiv1);
         $messageRowSendDiv1.append('<span class="message__author">선배님</span>');
         $messageRowSendDiv1.append($messageRowSendDiv2);
@@ -53,7 +53,7 @@ var getParameters = function (paramName) {
         $messageRowSend = $('<div class = "message-row"></div>');
         $messageRowSendDiv1 = $('<div class = "message-row__content"></div>');
         $messageRowSendDiv2 = $('<div class="message__info"></div>');
-        $messageRowSend.append($('<img src="tiger.JPG">'));
+        $messageRowSend.append($('<img src="../images/tiger.JPG">'));
         $messageRowSend.append($messageRowSendDiv1);
         $messageRowSendDiv1.append('<span class="message__author">선배님</span>');
         $messageRowSendDiv1.append($messageRowSendDiv2);
